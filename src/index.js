@@ -33,8 +33,8 @@ app.use((err, req, res, next) => {
     });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
+// 404 handler (no path to avoid path-to-regexp wildcard issues)
+app.use((req, res) => {
     res.status(404).json({ 
         error: "Route not found",
         path: req.originalUrl 
