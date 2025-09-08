@@ -1,6 +1,9 @@
 {
     "name": "hello-world-test",
     "version": "1.0.0",
+    "engines": {
+        "node": ">=18"
+    },
     "main": "src/index.js",
     "scripts": {
         "dev": "nodemon src/index.js",
